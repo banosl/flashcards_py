@@ -79,21 +79,16 @@ def test_turn_correct():
 
   round = Round(deck)
 
-  result = round.current_card()
-  assert result == card1
+  assert round.current_card() == card1
 
   turn = round.take_turn("Juneau")
 
-  result = round.current_card()
-  assert result == card2
+  assert round.current_card() == card2
 
-  result = round.turn_correct(turn)
-  assert result == True
+  assert round.turn_correct(turn) == True
 
   turn = round.take_turn("Nashville")
 
-  result = round.current_card()
-  assert result == card3
+  assert round.current_card() == card3
 
-  result = round.turn_correct(turn)
-  assert result == False
+  assert round.turn_correct(turn) == False
