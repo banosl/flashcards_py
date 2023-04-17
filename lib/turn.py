@@ -3,7 +3,7 @@ class Turn:
     self.guess = guess
     self.card = card
 
-  def correct(self):
+  def check_correct(self):
     if self.guess == self.card.answer:
       return True
     else:
