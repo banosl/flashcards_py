@@ -21,3 +21,14 @@ def test_check_correct():
 
   result = turn2.check_correct()
   assert result == False
+
+def test_feedback():
+  card1 = Card("What is the capital of Alaska?", "Juneau", "Geography")
+  turn1 = Turn("Juneau", card1)
+  turn2 = Turn("Honolulu", card1)
+
+  result = turn1.feedback()
+  assert result == "Correct!"
+
+  result = turn2.feedback()
+  assert result == "Incorrect!!!!!!! >:["

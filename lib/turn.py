@@ -8,3 +8,9 @@ class Turn:
       return True
     else:
       return False
+    
+  def feedback(self):
+    if self.check_correct() == True:
+      return "Correct!"
+    else:
+      return "Incorrect!!!!!!! >:["
