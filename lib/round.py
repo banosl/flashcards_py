@@ -36,3 +36,7 @@ class Round:
       if (turn.feedback() == "Correct!"):
         correct.append(turn)
     return len(correct)
+
+  def percent_correct(self):
+    total = len(self.turns)
+    return round((self.number_correct()/total), 4) * 100
