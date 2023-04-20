@@ -92,3 +92,5 @@ def test_turn_correct():
   assert round.current_card() == card3
 
   assert round.turn_correct(turn) == False
+
+  assert len(round.turns) == 2
