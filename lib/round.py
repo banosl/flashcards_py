@@ -18,3 +18,10 @@ class Round:
 
   def turn_correct(self, turn):
     return turn.check_correct()
+  
+  def number_correct(self):
+    correct = []
+    for turn in self.turns:
+      if (turn.feedback() == "Correct!"):
+        correct.append(turn)
+    return len(correct)
