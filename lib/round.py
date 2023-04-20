@@ -40,3 +40,15 @@ class Round:
   def percent_correct(self):
     total = len(self.turns)
     return round((self.number_correct()/total), 4) * 100
+  
+  def percent_correct_by_category(self, cat):
+    cat_array = []
+    correct_count = self.number_correct_by_category(cat)
+
+    for turn in self.turns:
+      if (turn.card.category == cat):
+        cat_array.append(turn)
+
+    return round((correct_count/len(cat_array)), 4) * 100
+    
+  

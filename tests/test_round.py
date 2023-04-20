@@ -154,3 +154,23 @@ def test_percent_correct():
   turn = round.take_turn("North north west")
 
   assert round.percent_correct() == 66.67
+
+def test_percent_correct_by_category():
+  card1 = Card("What is the capital of Alaska?", "Juneau", "Geography")
+  card2 = Card("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?",
+               "Mars",
+               "STEM")
+  card3 = Card("Describe in words the exact direction that is 697.5° clockwise from due north?",
+               "North north west",
+               "STEM")
+  cards = [card1, card2, card3]
+
+  deck = Deck(cards)
+
+  round = Round(deck)
+  turn = round.take_turn("Juneau")
+  turn = round.take_turn("Nashville")
+  turn = round.take_turn("North north west")
+
+  assert round.percent_correct_by_category("Geography") == 100.00
+  assert round.percent_correct_by_category("STEM") == 50.00
