@@ -11,5 +11,3 @@ class Deck:
       if (card.category == category):
         by_category.append(card) 
     return by_category
-
-    

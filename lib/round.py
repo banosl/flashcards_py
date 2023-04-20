@@ -25,3 +25,14 @@ class Round:
       if (turn.feedback() == "Correct!"):
         correct.append(turn)
     return len(correct)
+  
+  def number_correct_by_category(self, cat):
+    cat_array = []
+    correct = []
+    for turn in self.turns:
+      if (turn.card.category == cat):
+        cat_array.append(turn)
+    for turn in cat_array:
+      if (turn.feedback() == "Correct!"):
+        correct.append(turn)
+    return len(correct)
