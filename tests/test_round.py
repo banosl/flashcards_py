@@ -94,3 +94,5 @@ def test_turn_correct():
   assert round.turn_correct(turn) == False
 
   assert len(round.turns) == 2
+
+  assert round.turns[-1].feedback() == "Incorrect!!!!!!! >:["
