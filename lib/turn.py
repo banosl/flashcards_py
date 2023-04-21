@@ -1,6 +1,6 @@
 class Turn:
   def __init__(self, guess, card):
-    self.guess = guess
+    self.guess = guess.lower()
     self.card = card
 
   def check_correct(self):

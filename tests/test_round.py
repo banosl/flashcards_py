@@ -58,12 +58,12 @@ def test_take_turn():
   round.take_turn("Juneau")
   result = round.turns[0]
 
-  assert result.guess == "Juneau"
+  assert result.guess == "juneau"
 
   round.take_turn("Nashville")
   result = round.turns[1]
 
-  assert result.guess == "Nashville"
+  assert result.guess == "nashville"
 
 def test_turn_correct():
   card1 = Card("What is the capital of Alaska?", "Juneau", "Geography")
