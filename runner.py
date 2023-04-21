@@ -25,11 +25,8 @@ deck = Deck(cards)
 
 round = Round(deck)
 
-def start(cards, round):
-  cards_count = len(cards)
-  counter = 0
-  counter += 1
-  print(f"Welcome! You're playing with {cards_count} cards.")
+
+def question_loop(cards, round, counter, cards_count):
   print("-------------------------------------------------")
   print(f"This is card number {counter} out of {cards_count}.")
   print(f"Question: {round.current_card().question}")
@@ -37,6 +34,17 @@ def start(cards, round):
   answer = input()
 
   round.take_turn(answer)
-  print(round.turns[0].feedback())
+  print(round.turns[len(round.turns)-1].feedback())
 
+
+
+
+def start(cards, round):
+  cards_count = len(cards)
+  counter = 0
+  counter += 1
+  print(f"Welcome! You're playing with {cards_count} cards.")
+  while (counter < (cards_count + 1)):
+    question_loop(cards, round, counter, cards_count)
+    counter += 1
 start(cards, round)
