@@ -3,7 +3,7 @@
 </div>
 
 # <p align="center"> :black_joker:Flash Cards:black_joker: </p>
-This application is a command line interface game, called "Flash Cards". The user will have a deck of 6 cards with different questions and will be prompted to type their response in the command line. Based on the response, the user will be provided with feedback on if their answer is correct or incorrect. At the end of the game, the user will be provided a score based on their total correct responsees per round and per category. Finally, the user will have the option to play again or the exit the game. 
+This application is a command line interface game, called "Flash Cards". The user will have a deck of 6 cards with different questions and will be prompted to type their response in the command line. Based on the response, the user will be provided with feedback on if their answer is correct or incorrect. At the end of the game, the user will be provided a score based on their total correct responses per round and per category. Finally, the user will have the option to play again or the exit the game. 
 
 ## Project Goals
 The goal of this project was to collaborate and learn Python with friends!
